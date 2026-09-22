@@ -1,0 +1,16 @@
+git commit
+-> copy and paste to another commit 
+git branch "BRANCH NAME"
+-> parent work labled differently with the same commits
+git checkout "BRANCH NAME"
+-> switching into a different branch
+git pull 
+-> takes updated information from the remote repo and merges it into the local repo
+git push
+-> uploading your changes to the remote repo.
+git merge "BRANCH NAME"
+-> creates a new commit that has originates from two unique parent.  
+git rebase "BRANCH NAME"
+-> takes a set of commits and then copies then makes a new commit bellow the BRANCH NAME
+git fetch
+-> takes the new updates from the remote repo and prepares it to be placed into the local repo
