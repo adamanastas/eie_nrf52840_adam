@@ -6,11 +6,17 @@ git checkout "BRANCH NAME"
 -> switching into a different branch
 git pull 
 -> takes updated information from the remote repo and merges it into the local repo
-git push
--> uploading your changes to the remote repo.
+git push -u <remote> <branch>
+-> uploading your changes to the remote repo.  
 git merge "BRANCH NAME"
 -> creates a new commit that has originates from two unique parent.  
 git rebase "BRANCH NAME"
 -> takes a set of commits and then copies then makes a new commit bellow the BRANCH NAME
 git fetch
 -> takes the new updates from the remote repo and prepares it to be placed into the local repo
+git add "FILE PATH"
+-> saves the changes that have been made to your code to a staging location.
+git status
+-> checks the status of the local repo file for any changes
+git log
+-> tracks the history of the git commands that have been done on the repo workflow
