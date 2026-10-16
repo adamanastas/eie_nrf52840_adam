@@ -20,6 +20,8 @@
     return 0;
   }
 
+  LED_blink(LED0, LED_16HZ);
+
   while (1){
     k_msleep(SLEEP_MS);
   }
