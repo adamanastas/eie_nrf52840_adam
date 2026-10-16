@@ -19,21 +19,12 @@
   if (0 > LED_init()){
     return 0;
   }
-
-  LED_blink(LED0, LED_1HZ);
-
-  LED_set(LED1, LED_ON);
-
-  uint8_t duty_cycle = 0;
-
+  
   while (1){
-    LED_pwm(LED2, duty_cycle);
 
-    if (duty_cycle == 100){
-      duty_cycle = 0;
-      LED_toggle(LED3);
-    } else {
-      duty_cycle++;
+    if(BTN_check_clear_pressed(BTN0)){
+      LED_toggle(LED0);
+      printk("Button 0 pressed!\n");
     }
 
     k_msleep(SLEEP_MS);
