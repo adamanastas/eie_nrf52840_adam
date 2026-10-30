@@ -24,7 +24,7 @@
 
   while (1) {
 
-    if (number > 15) {
+    if (number > 16) {
       LED_set(LED0,LED_OFF);
       LED_set(LED1,LED_OFF);
       LED_set(LED2,LED_OFF);
