@@ -13,6 +13,7 @@
  #define SLEEP_MS 1
 
   static uint8_t number = 0;
+  static uint8_t var_pwm_number = 1;
 
  int main(void){
   if (0 > BTN_init()){
@@ -23,6 +24,11 @@
   }
 
   while (1) {
+
+    if (var_pwm_number == 100){
+      var_pwm_number = 0;
+      LED_set(LED0,var_pwm_number);
+    }
 
     if (number > 16) {
       LED_set(LED0,LED_OFF);
@@ -72,6 +78,12 @@
       number++;
 
     } 
+
+    if (BTN_check_clear_pressed(BTN1)){
+      LED_pwm(LED0,var_pwm_number);
+      var_pwm_number++;
+    }
+
   }
   return 0;
  }
